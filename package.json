@@ -1,0 +1,15 @@
+{
+  "name": "inovar_alunos_proxy",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Darguima <dariosguima@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "http-proxy-middleware": "^2.0.3"
+  },
+
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}
