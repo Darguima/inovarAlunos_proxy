@@ -1210,11 +1210,6 @@ acorn@^7.4.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
-add@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
-  integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
-
 ajv@^6.10.0, ajv@^6.12.4:
   version "6.12.6"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
@@ -2814,10 +2809,9 @@ negotiator@0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
-node-http-proxy-json@^0.1.9:
+"node-http-proxy-json@https://github.com/Darguima/node-http-proxy-json.git":
   version "0.1.9"
-  resolved "https://registry.yarnpkg.com/node-http-proxy-json/-/node-http-proxy-json-0.1.9.tgz#5e744138c189ebd7e0105fe92d035a5486478cd4"
-  integrity sha512-WrKAR/y09BWaz5WqgbxuE6D/XsdhQFkLkSdnRk0a5uBKSINtApMV085MN7JMh+stiyBBltvgSR9SYVIZIpKKKQ==
+  resolved "https://github.com/Darguima/node-http-proxy-json.git#d83c48275d0838481f9acdb46cdd8db764e200ae"
   dependencies:
     bufferhelper "^0.2.1"
     concat-stream "^1.5.1"
