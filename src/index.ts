@@ -2,7 +2,13 @@ import express from 'express'
 import { createProxyMiddleware } from 'http-proxy-middleware'
 import modifyResponse from 'node-http-proxy-json'
 
+import fs from 'fs'
+import https from 'https'
+
 import { inovarApiResponse } from './types/inovarApiResponse'
+
+const key = fs.readFileSync('cert/CA/server/server.decrypted.key')
+const cert = fs.readFileSync('cert/CA/server/server.crt')
 
 const app = express()
 
@@ -32,4 +38,5 @@ app.use(
   )
 )
 
-app.listen(80)
+const server = https.createServer({ key, cert }, app)
+server.listen(443)
