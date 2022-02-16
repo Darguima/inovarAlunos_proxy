@@ -11,10 +11,12 @@
     "node-http-proxy-json": "https://github.com/Darguima/node-http-proxy-json.git"
   },
   "scripts": {
-    "dev-build": "nodemon --exec babel src/index.ts --out-file dist/bundle.js",
-    "dev-start": "nodemon dist/bundle.js",
-    "build": "babel src/index.ts --out-file dist/bundle.js",
-    "start": "node dist/bundle.js"
+    "dev-build": "babel --watch --extensions .ts,.js ./src -d ./dist",
+    "b": "yarn dev-build",
+    "dev-start": "sudo nodemon dist/index.js",
+    "s": "yarn dev-start",
+    "build": "babel src/index.ts --out-file dist/index.js",
+    "start": "sudo node dist/index.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.0",
