@@ -15,7 +15,7 @@
     "b": "yarn dev-build",
     "dev-start": "sudo nodemon dist/index.js",
     "s": "yarn dev-start",
-    "build": "babel src/index.ts --out-file dist/index.js",
+    "build": "babel --extensions .ts,.js ./src -d ./dist",
     "start": "sudo node dist/index.js"
   },
   "devDependencies": {

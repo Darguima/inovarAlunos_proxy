@@ -35,6 +35,15 @@ app.use(
         }
 
         switch (req.url) {
+          case '/api/loginFU':
+            modifyResponse(res, proxyRes.headers['content-encoding'], (body: inovarApiResponse.loginFU) => {
+              if (body && body.Matriculas && body.Matriculas[0].MatriculaId) {
+                registrationId = body.Matriculas[0].MatriculaId
+              }
+              return body
+            })
+            break
+
           case `/api/faltas/${registrationId}/1`:
 
             modifyResponse(res, proxyRes.headers['content-encoding'], (body: inovarApiResponse.faltas) => {
