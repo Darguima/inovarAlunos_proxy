@@ -21,8 +21,12 @@ app.use(
   createProxyMiddleware(
     {
       target: 'https://193.236.33.154',
-      headers: { Host: 'alunos.aecarlosamarante.pt' },
-      changeOrigin: true,
+
+      onProxyReq: (proxyReq, req) => {
+        if (req.headers.host) {
+          proxyReq.setHeader('host', req.headers.host || '')
+        }
+      },
 
       onProxyRes: (proxyRes, req, res) => {
         console.log('proxy requested')
