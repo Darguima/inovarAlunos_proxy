@@ -9,9 +9,6 @@ import parseJwt from './utils/parseJwt'
 
 import { inovarApiResponse } from './types/inovarApiResponse'
 
-const key = fs.readFileSync('cert/CA/server/server.decrypted.key')
-const cert = fs.readFileSync('cert/CA/server/server.crt')
-
 const app = express()
 
 let registrationId = 0
@@ -53,7 +50,7 @@ app.use(
             modifyResponse(res, proxyRes.headers['content-encoding'], (body: inovarApiResponse.faltas) => {
               if (!body) return
 
-              body.Faltas = [body.Faltas[1]]
+              body.Faltas = []
               body.NextRequest = ''
               return body
             })
@@ -64,5 +61,11 @@ app.use(
   )
 )
 
-const server = https.createServer({ key, cert }, app)
+const server = https.createServer(
+  {
+    key: fs.readFileSync('certificate/CA/server/server.decrypted.key'),
+    cert: fs.readFileSync('certificate/CA/server/server.crt')
+  },
+  app
+)
 server.listen(443, () => console.log('Server Started'))
