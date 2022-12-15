@@ -5,7 +5,7 @@
   "author": "Darguima <dariosguima@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.2",
+    "express": "^4.17.3",
     "http-proxy-middleware": "^2.0.3",
     "https": "^1.0.0",
     "node-http-proxy-json": "https://github.com/Darguima/node-http-proxy-json.git"
